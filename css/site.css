@@ -53,20 +53,6 @@ option[value="no_cheese"] {
   background-color: #FFF5E1; 
 }
 
-.title {
-  font-size: 28px;
-  font-weight: bold;
-  color: #D2691E; 
-  margin-bottom: 30px;
-}
-
-.bread-top, .bread-bottom {
-  background-color: #F4E1A1;
-  padding: 10px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
-
 .bread-top {
   margin-bottom: 0;
   background-color: #F2D25F; 
