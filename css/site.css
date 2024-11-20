@@ -1,37 +1,88 @@
-/* we can use a single css file to style all the files in our wwebsite */
-
-/* you can pick your own background colors, text colors, and fonts */
-
-/* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-color: #46585e;
+  font-family: 'Arial', sans-serif;
+  background-color: #F4E1A1; /* Light bread color */
+  color: #4C4C4C; /* Dark text for readability */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* we can have rules apply to multiple elements at the same time with commas */
-h1,h2,h3 {
-  font-family: sans-serif;
-}
-
-/* and we can have rules that overlap other rules, both take effect */
-h1 {
-  letter-spacing: 5px;
-  word-spacing: 5px;
-  font-size: 200%;
+.container {
+  background-color: #FFF5E1; /* Lighter bread background */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-/* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
-#content {
-  margin: 10px;
-  padding: 10px;
-  border: solid 1px #888;
-  background-color: #4a7697;
+label {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #4B8A29; /* Lettuce green */
 }
 
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
-.minor-section {
+select {
+  font-size: 16px;
   padding: 10px;
-  margin-bottom: 10px;
-  border: solid 1px #888;
-  background-color: #f4c148;
+  border-radius: 10px;
+  border: 2px solid #F2B97F; /* Light bread color */
+  background-color: #F9E1C1; /* Toasted bread effect */
+  appearance: none; /* Remove default dropdown arrow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+select:focus {
+  outline: none;
+  border-color: #D3A15C; /* Cheese-inspired gold */
+}
+
+option {
+  padding: 10px;
+}
+
+option[value="cheddar"] {
+  background-color: #F9D271; /* Cheddar yellow */
+}
+
+option[value="provolone"] {
+  background-color: #E8D6C2; /* Provolone pale */
+}
+
+option[value="no_cheese"] {
+  background-color: #FFF5E1; /* Same as background for no cheese */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #D2691E; /* Rich sandwich brown (like toasted crust) */
+  margin-bottom: 30px;
+}
+
+/* Fancy dropdown arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Adding some 'sandwich' visual elements */
+.bread-top, .bread-bottom {
+  background-color: #F4E1A1;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.bread-top {
+  margin-bottom: 0;
+  background-color: #F2D25F; /* Golden-brown for top bread */
+}
+
+.bread-bottom {
+  background-color: #F2D25F; /* Golden-brown for bottom bread */
+  margin-top: 20px;
 }
