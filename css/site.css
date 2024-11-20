@@ -41,18 +41,6 @@ select:focus {
   border-color: #D3A15C; 
 }
 
-option[value="cheddar"] {
-  background-color: #F9D271; 
-}
-
-option[value="provolone"] {
-  background-color: #E8D6C2; 
-}
-
-option[value="no_cheese"] {
-  background-color: #FFF5E1; 
-}
-
 .bread-top {
   margin-bottom: 0;
   background-color: #F2D25F; 
