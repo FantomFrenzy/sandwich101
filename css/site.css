@@ -1,7 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #F4E1A1; /* Light bread color */
-  color: #4C4C4C; /* Dark text for readability */
+  background-color: #F4E1A1; 
+  color: #4C4C4C; 
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  background-color: #FFF5E1; /* Lighter bread background */
+  background-color: #FFF5E1; 
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -23,22 +23,22 @@ label {
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
-  color: #4B8A29; /* Lettuce green */
+  color: #4B8A29; 
 }
 
 select {
   font-size: 16px;
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid #F2B97F; /* Light bread color */
-  background-color: #F9E1C1; /* Toasted bread effect */
-  appearance: none; /* Remove default dropdown arrow */
+  border: 2px solid #F2B97F; 
+  background-color: #F9E1C1; 
+  appearance: none; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 select:focus {
   outline: none;
-  border-color: #D3A15C; /* Cheese-inspired gold */
+  border-color: #D3A15C; 
 }
 
 option {
@@ -46,30 +46,29 @@ option {
 }
 
 option[value="cheddar"] {
-  background-color: #F9D271; /* Cheddar yellow */
+  background-color: #F9D271; 
 }
 
 option[value="provolone"] {
-  background-color: #E8D6C2; /* Provolone pale */
+  background-color: #E8D6C2; 
 }
 
 option[value="no_cheese"] {
-  background-color: #FFF5E1; /* Same as background for no cheese */
+  background-color: #FFF5E1; 
 }
 
 .title {
   font-size: 28px;
   font-weight: bold;
-  color: #D2691E; /* Rich sandwich brown (like toasted crust) */
+  color: #D2691E; 
   margin-bottom: 30px;
 }
 
-/* Fancy dropdown arrow */
+
 select::-ms-expand {
   display: none;
 }
 
-/* Adding some 'sandwich' visual elements */
 .bread-top, .bread-bottom {
   background-color: #F4E1A1;
   padding: 10px;
@@ -79,10 +78,9 @@ select::-ms-expand {
 
 .bread-top {
   margin-bottom: 0;
-  background-color: #F2D25F; /* Golden-brown for top bread */
-}
+  background-color: #F2D25F; 
 
 .bread-bottom {
-  background-color: #F2D25F; /* Golden-brown for bottom bread */
+  background-color: #F2D25F; 
   margin-top: 20px;
 }
