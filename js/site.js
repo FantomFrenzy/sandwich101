@@ -21,10 +21,10 @@
 // the original and recomment this one for testing.
 // Define the options for each dropdown
 const options = {
-  bread: ["Sourdough", "Wheat", "Rye"],
-  protein: ["Turkey", "Ham", "Roast Beef"],
-  cheese: ["Cheddar", "Provolone", "American", "No Cheese"],
-  veggies: ["Lettuce", "Tomato", "Pickles", "No Veggies"]
+  bread: ["","Sourdough", "Wheat", "Rye"],
+  protein: ["", "Turkey", "Ham", "Roast Beef"],
+  cheese: ["", "Cheddar", "Provolone", "American"],
+  veggies: ["", "Lettuce", "Tomato", "Pickles"]
 };
 
 // Function to populate each dropdown with options
