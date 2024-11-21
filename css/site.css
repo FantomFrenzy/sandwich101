@@ -49,3 +49,7 @@ select:focus {
   background-color: #F2D25F; 
   margin-top: 20px;
 } 
+
+img {
+  border: 6px solid #e17f1d;
+}
