@@ -2,20 +2,16 @@
 // Author: Your Name
 // Date:
 
-// Constants
+document.getElementById('submitButton').addEventListener('click', function () {
+  // Get selected values
+  const bread = document.getElementById('bread').value;
+  const protein = document.getElementById('protein').value;
+  const cheese = document.getElementById('cheese').value;
+  const veggies = document.getElementById('veggies').value;
 
-// Functions
-
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {
-  // some code here
-  // return results;
-}
-
-function main() {
-  console.log("Main function started.");
-  // the code that makes everything happen
-}
-
-// let's get this party started
-main();
+  // Construct a URL path based on the selected options
+  const sandwichUrl = `urlflex/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
+  // Redirect to the URL
+  console.log('Redirecting to:', sandwichUrl);
+  window.location.href = sandwichUrl;
+});

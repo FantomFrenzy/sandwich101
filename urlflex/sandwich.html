@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Sandwich</title>
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/site.js" defer></script>
+
+</head>
+<body>
+    <h1>Your Custom Sandwich</h1>
+    <p id="bread"></p>
+    <p id="protein"></p>
+    <p id="cheese"></p>
+    <p id="veggies"></p>
+
+    <script>
+        // Parse the query string from the URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        // Get individual parameters
+        const bread = urlParams.get('bread');
+        const protein = urlParams.get('protein');
+        const cheese = urlParams.get('cheese');
+        const veggies = urlParams.get('veggies');
+
+        // Update the page content with the sandwich details
+        document.getElementById('bread').textContent = `Bread: ${bread}`;
+        document.getElementById('protein').textContent = `Protein: ${protein}`;
+        document.getElementById('cheese').textContent = `Cheese: ${cheese}`;
+        document.getElementById('veggies').textContent = `Veggies: ${veggies}`;
+    </script>
+</body>
+</html>
