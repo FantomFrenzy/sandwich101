@@ -1,7 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #F4E1A1; 
-  color: #4C4C4C; 
+  color: #7d4a3c; 
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -10,6 +10,17 @@ body {
   margin: 0;
 }
 
+h1  {
+  padding: 10px;
+  text-align: center;
+  background: #e2a440;
+  color: white;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  border: solid 4px;
+  border-color: #e17f1d;
+
+}
 .container {
   background-color: #FFF5E1; 
   padding: 40px;
@@ -51,5 +62,23 @@ select:focus {
 } 
 
 img {
-  border: 6px solid #e17f1d;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: solid 7px;
+  border-color: #e17f1d;
+  
 }
+
+.minor-section {
+  padding: 10px;
+  background-color: #ffca94;
+  border: solid 4px;
+  border-color: #e17f1d;
+  border-style: dotted;
+}
+
+
+
+
