@@ -19,7 +19,6 @@
 // This code helps reduce our index.html down to prevent crowding  
 // Please test again if it works. If this doesn't work, uncomment 
 // the original and recomment this one for testing.
-
 // Define the options for each dropdown
 const options = {
   bread: ["Sourdough", "Wheat", "Rye"],
@@ -43,6 +42,15 @@ function populateDropdown(id, items) {
 Object.keys(options).forEach(key => populateDropdown(key, options[key]));
 
 // Add event listener for the button
-document.getElementById("submitButton").addEventListener("click", function () {
-  alert("Sandwich Created!");
+document.getElementById('submitButton').addEventListener('click', function () {
+    // Get selected values
+    const bread = document.getElementById('bread').value;
+    const protein = document.getElementById('protein').value;
+    const cheese = document.getElementById('cheese').value;
+    const veggies = document.getElementById('veggies').value;
+    // Construct a URL path based on the selected options
+    const sandwichUrl = `urlflex/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
+    // Redirect to the URL
+    console.log('Redirecting to:', sandwichUrl);
+    window.location.href = sandwichUrl;
 });
