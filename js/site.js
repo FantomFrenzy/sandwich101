@@ -16,6 +16,10 @@
 //   window.location.href = sandwichUrl;
 // });
 
+// This code helps reduce our index.html down to prevent crowding  
+// Please test again if it works. If this doesn't work, uncomment 
+// the original and recomment this one for testing.
+
 // Define the options for each dropdown
 const options = {
   bread: ["Sourdough", "Wheat", "Rye"],
