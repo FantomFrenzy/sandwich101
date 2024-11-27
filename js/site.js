@@ -2,23 +2,6 @@
 // Author: Your Name
 // Date:
 
-// document.getElementById('submitButton').addEventListener('click', function () {
-//   // Get selected values
-//   const bread = document.getElementById('bread').value;
-//   const protein = document.getElementById('protein').value;
-//   const cheese = document.getElementById('cheese').value;
-//   const veggies = document.getElementById('veggies').value;
-
-//   // Construct a URL path based on the selected options
-//   const sandwichUrl = `urlflex/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
-//   // Redirect to the URL
-//   console.log('Redirecting to:', sandwichUrl);
-//   window.location.href = sandwichUrl;
-// });
-
-// This code helps reduce our index.html down to prevent crowding  
-// Please test again if it works. If this doesn't work, uncomment 
-// the original and recomment this one for testing.
 // Define the options for each dropdown
 const options = {
   bread: ["","Sourdough", "Wheat", "Rye"],
@@ -41,6 +24,17 @@ function populateDropdown(id, items) {
 // Populate each dropdown
 Object.keys(options).forEach(key => populateDropdown(key, options[key]));
 
+// Show the pop-up when all fields are empty
+function showPopup(popupId) {
+  document.getElementById('popup-check').style.display = 'block';
+}
+
+// Closes the pop-up
+// Function to close the popup
+function closePopup(popupId) {
+  document.getElementById('popup-check').style.display = 'none';
+}
+
 // Add event listener for the button
 document.getElementById('submitButton').addEventListener('click', function () {
     // Get selected values
@@ -48,6 +42,13 @@ document.getElementById('submitButton').addEventListener('click', function () {
     const protein = document.getElementById('protein').value;
     const cheese = document.getElementById('cheese').value;
     const veggies = document.getElementById('veggies').value;
+    
+    // Check if all option fields are empty
+    if (!bread && !protein && !cheese && !veggies) {
+      showPopup('popup-check'); // Show this popup if all are empty
+      return;
+    }
+ 
     // Construct a URL path based on the selected options
     const sandwichUrl = `urlflex/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
     // Redirect to the URL
