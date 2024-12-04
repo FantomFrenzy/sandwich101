@@ -59,5 +59,11 @@ document.getElementById('submitButton').addEventListener('click', function () {
     // Redirect to the URL
     console.log('Redirecting to:', sandwichUrl);
     window.location.href = sandwichUrl;
+
+    const aboutUsButton = document.querySelector('.about-us-btn');
+
+    const container = document.getElementById('container');
+
+    container.appendChild(aboutUsButton);
 });
 
