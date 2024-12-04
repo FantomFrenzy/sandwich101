@@ -1,7 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #c8ab4b; 
-    color: #7d4a3c; 
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(247, 249, 176);
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -9,3 +8,23 @@ body {
     height: 100vh;
     margin: 0;
   }
+
+h1  {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(165, 85, 20);
+    padding: 20px;
+    border: solid 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 214, 152);
+}
+
+p   {
+    font-size: large;
+    background-color: rgb(255, 210, 131);
+    padding: 40px;
+    border: solid 3px;
+    border-style: dashed;
+    border-color: rgb(225, 185, 66);
+}
