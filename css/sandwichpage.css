@@ -1,1 +1,31 @@
-/* this css file will only style the homepage of our site */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(247, 249, 176);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+h1  {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(145, 67, 8);
+    padding: 20px;
+    border: solid 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 216, 126);
+}
+
+p   {
+    font-size: large;
+    background-color: rgb(255, 210, 131);
+    padding: 40px;
+    border: solid 3px;
+    border-style: dashed;
+    border-color: rgb(225, 185, 66);
+}
