@@ -48,13 +48,20 @@ document.getElementById('submitButton').addEventListener('click', function () {
     const cheese = document.getElementById('cheese').value;
     const veggies = document.getElementById('veggies').value;
     
+    // Construct a URL path based on the selected options
+    const sandwichUrl = `sandwichpage/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
+    // Redirect to the URL
+    console.log('Redirecting to:', sandwichUrl);
+    window.location.href = sandwichUrl;
     // Check if all option fields are empty
+    
     if (!bread && !protein && !cheese && !veggies) {
       showPopup('popup-check'); // Show this popup if all are empty
       return;
     }
     
 });
+
     const aboutUsButton = document.querySelector('.about-us-btn');
     aboutUsButton.addEventListener('click', () => {
     window.location.href = 'about-us.html'; 

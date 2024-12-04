@@ -17,22 +17,8 @@
     <p id="cheese"></p>
     <p id="veggies"></p>
 
-    <script>
-        // Parse the query string from the URL
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-
-        // Get individual parameters
-        const bread = urlParams.get('bread');
-        const protein = urlParams.get('protein');
-        const cheese = urlParams.get('cheese');
-        const veggies = urlParams.get('veggies');
-
-        // Update the page content with the sandwich details
-        document.getElementById('bread').textContent = `Bread: ${bread}`;
-        document.getElementById('protein').textContent = `Protein: ${protein}`;
-        document.getElementById('cheese').textContent = `Cheese: ${cheese}`;
-        document.getElementById('veggies').textContent = `Veggies: ${veggies}`;
-    </script>
+     
+    <b>Calories<div id="data-container"></div></b>
+    
 </body>
 </html>
