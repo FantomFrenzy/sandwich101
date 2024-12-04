@@ -55,9 +55,15 @@ document.getElementById('submitButton').addEventListener('click', function () {
     }
  
     // Construct a URL path based on the selected options
-    const sandwichUrl = `urlflex/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
+    const sandwichUrl = `sandwichpage/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
     // Redirect to the URL
     console.log('Redirecting to:', sandwichUrl);
     window.location.href = sandwichUrl;
+
+    const aboutUsButton = document.querySelector('.about-us-btn');
+
+    const container = document.getElementById('container');
+
+    container.appendChild(aboutUsButton);
 });
 
