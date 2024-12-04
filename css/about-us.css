@@ -11,13 +11,13 @@ body {
 
 h1  {
     font-family: 'Courier New', Courier, monospace;
-    color: rgb(165, 85, 20);
+    color: rgb(145, 67, 8);
     padding: 20px;
     border: solid 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 214, 152);
+    background-color: rgb(255, 216, 126);
 }
 
 p   {
@@ -28,3 +28,10 @@ p   {
     border-style: dashed;
     border-color: rgb(225, 185, 66);
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
