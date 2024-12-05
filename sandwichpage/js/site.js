@@ -2,9 +2,8 @@
 // Author: Your Name
 // Date:
 
-
+//NutrientAPI variables
 var urlParams = new URLSearchParams(window.location.search);
-
         var nutrientbread = document.getElementById('bread').textContent = `Bread: ${urlParams.get('bread')}`;
         var nutrientprotein = document.getElementById('protein').textContent = `Protein: ${urlParams.get('protein')}`;
         var nutrientcheese = document.getElementById('cheese').textContent = `Cheese: ${urlParams.get('cheese')}`;
@@ -15,6 +14,7 @@ var urlParams = new URLSearchParams(window.location.search);
 // Parse the query string from the URL
 const queryString = window.location.search;
 const sandwichparam = new URLSearchParams(queryString);
+
 
 // Get individual parameters
 const bread = sandwichparam.get('bread');
@@ -27,6 +27,8 @@ document.getElementById('bread').textContent = `Bread: ${bread}`;
 document.getElementById('protein').textContent = `Protein: ${protein}`;
 document.getElementById('cheese').textContent = `Cheese: ${cheese}`;
 document.getElementById('veggies').textContent = `Veggies: ${veggies}`;
+
+
  
 const container = document.getElementById("data-container");
 
@@ -35,7 +37,7 @@ async function nutritionapi(params) {
                         "headers": {
                         "content-type": "application/json",
                         },
-                        "body": JSON.stringify({"ingr":[`${nutrientbread}`,`${nutrientprotein}`, `${nutrientcheese}`, `${nutrientveggies}`]}),
+                        "body": JSON.stringify({"ingr":[`2 slices ${nutrientbread}`,`1 slice ${nutrientprotein}`, `1 slice ${nutrientcheese}`, `1 ounce ${nutrientveggies}`]}),
                         "method": "POST",
                         "mode": "cors",
                 });
@@ -48,3 +50,7 @@ async function nutritionapi(params) {
 
 //calling function
 nutritionapi()
+
+//Header dynamic
+const headerText = `Your ${bread} ${protein} sandwich`;
+document.getElementById('sandwich-header').textContent = headerText;
