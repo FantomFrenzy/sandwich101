@@ -28,18 +28,3 @@ p   {
     border-style: dashed;
     border-color: rgb(225, 185, 66);
 }
-
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding-right: 40px;
-
-  }
-
-li  {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center;
-}
