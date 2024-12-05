@@ -35,7 +35,7 @@ async function nutritionapi(params) {
                         "headers": {
                         "content-type": "application/json",
                         },
-                        "body": JSON.stringify({"ingr":[`2 slice ${nutrientbread}`,`2 slices ${nutrientprotein}`, `1 slice ${nutrientcheese}`, `2 slice ${nutrientveggies}`]}),
+                        "body": JSON.stringify({"ingr":[`${nutrientbread}`,`${nutrientprotein}`, `${nutrientcheese}`, `${nutrientveggies}`]}),
                         "method": "POST",
                         "mode": "cors",
                 });
