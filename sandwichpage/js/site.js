@@ -45,11 +45,43 @@ async function nutritionapi(params) {
         
         const nutrientdata = await res.json();
         console.log(nutrientdata)
-
+        return nutrientdata; // Return the JSON data
 }
 
-//calling function
+//display information
+async function displayNutritionData() {
+        const urlParams = new URLSearchParams(window.location.search);
+
+                const nutbread = urlParams.get("bread");
+                const nutprotein = urlParams.get("protein");
+                const nutcheese = urlParams.get("cheese");
+                const nutveggies = urlParams.get("veggies");
+    
+        try {
+            const data = await nutritionapi(nutbread, nutprotein, nutcheese, nutveggies);
+            
+            // Find the HTML element where you want to display data
+            const nutritionList = document.getElementById("nutrition-list");
+    
+            // Clear existing content (if any)
+            nutritionList.innerHTML = "";
+    
+            // Populate the list with nutrition data
+            for (const [key, value] of Object.entries(data.totalNutrients)) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${key}: ${value.quantity} ${value.unit}`;
+                nutritionList.appendChild(listItem);
+            }
+        } catch (error) {
+            console.error("Error fetching nutrition data:", error);
+        }
+    }
+    
+// Call the display function when the page loads or on some event
+displayNutritionData();
+
 nutritionapi()
+
 
 //Header dynamic
 const headerText = `Your ${bread} ${protein} sandwich`;
