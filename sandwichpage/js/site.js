@@ -33,7 +33,7 @@ document.getElementById('veggies').textContent = `Veggies: ${veggies}`;
 const container = document.getElementById("data-container");
 
 async function nutritionapi(params) {
-        const res = await fetch("https://api.edamam.com/api/nutrition-details?app_id=89c07953&app_key=c2ac8faae07d5b4f9885264d4ebbee4b", {
+        const res = await fetch("https://api.edamam.com/api/nutrition-details?app_id=eb09bae7&app_key=44e291ec559829b67ec18f2ea32d6738", {
                         "headers": {
                         "content-type": "application/json",
                         },

@@ -5,7 +5,7 @@
 
 // Define the options for each dropdown
 const options = {
-  bread: ["Brioche","Sourdough", "Wheat", "Pita"],
+  bread: ["Ciabatta","Sourdough", "Wheat", "Rye"],
   protein: ["Egg", "Turkey", "Ham", "Roast Beef"],
   cheese: ["Swiss", "Cheddar", "Provolone", "American"],
   veggies: ["Onion", "Lettuce", "Tomato", "Pickles"]
