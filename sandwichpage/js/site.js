@@ -85,5 +85,5 @@ nutritionapi()
 
 
 //Header dynamic
-const headerText = `Your ${bread} ${protein} sandwich`;
+const headerText = `Your ${bread} ${protein} & ${cheese} sandwich`;
 document.getElementById('sandwich-header').textContent = headerText;
