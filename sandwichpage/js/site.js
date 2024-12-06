@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// index.js - Sandwich 101
+// Author: Group 14
+// Date: 12/09/24
 
 //NutrientAPI variables
 var urlParams = new URLSearchParams(window.location.search);

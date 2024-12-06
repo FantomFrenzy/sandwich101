@@ -3,16 +3,12 @@
 // Date: 12/09/24
 
 
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function myFunction(param1, param2) {}
-  // some code here
-  // return results;
 // Define the options for each dropdown
 const options = {
-  bread: ["","Sourdough", "Wheat", "Rye"],
-  protein: ["", "Turkey", "Ham", "Roast Beef"],
-  cheese: ["", "Cheddar", "Provolone", "American"],
-  veggies: ["", "Lettuce", "Tomato", "Pickles"]
+  bread: ["Ciabatta","Sourdough", "Wheat", "Rye"],
+  protein: ["Egg", "Turkey", "Ham", "Roast Beef"],
+  cheese: ["Swiss", "Cheddar", "Provolone", "American"],
+  veggies: ["Onion", "Lettuce", "Tomato", "Pickles"]
 };
 
 // Function to populate each dropdown with options
