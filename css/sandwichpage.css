@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(247, 249, 176);
     padding: 40px;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,20 +10,20 @@ body {
   }
 
 h1  {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'palatino', Courier, monospace;
+    color: rgb(145, 67, 8);
     padding: 20px;
-    border: ridge 5px #914308;
-    display: block;
+    border: solid 4px;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 216, 126);
 }
 
-.result-tab   {
+p   {
     font-size: large;
     background-color: rgb(255, 210, 131);
-    padding: 5px;
-    margin: 10px;
+    padding: 40px;
     border: solid 3px;
     border-style: dashed;
     border-color: rgb(225, 185, 66);

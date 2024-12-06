@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'palatino', sans-serif;
   background-color: #F4E1A1; 
   color: #7d4a3c; 
   padding: 40px;
@@ -16,7 +16,7 @@ h1  {
   background: #e2a440;
   color: white;
   font-size: 30px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Times New Roman', Courier, monospace;
   border: solid 4px;
   border-color: #e17f1d;
 
