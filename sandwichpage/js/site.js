@@ -69,7 +69,8 @@ async function displayNutritionData() {
             // Populate the list with nutrition data
             for (const [key, value] of Object.entries(data.totalNutrients)) {
                 const listItem = document.createElement("li");
-                listItem.textContent = `${key}: ${value.quantity} ${value.unit}`;
+                const roundedQuantity = Math.round(value.quantity);
+                listItem.textContent = `${key}: ${roundedQuantity} ${value.unit}`;
                 nutritionList.appendChild(listItem);
             }
         } catch (error) {
