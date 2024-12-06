@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// index.js - Sandwich 101
+// Author: Group 14
+// Date: 12/09/24
 
 //NutrientAPI variables
 var urlParams = new URLSearchParams(window.location.search);
@@ -33,11 +33,11 @@ document.getElementById('veggies').textContent = `Veggies: ${veggies}`;
 const container = document.getElementById("data-container");
 
 async function nutritionapi(params) {
-        const res = await fetch("https://api.edamam.com/api/nutrition-details?app_id=89c07953&app_key=c2ac8faae07d5b4f9885264d4ebbee4b", {
+        const res = await fetch("https://api.edamam.com/api/nutrition-details?app_id=eb09bae7&app_key=44e291ec559829b67ec18f2ea32d6738", {
                         "headers": {
                         "content-type": "application/json",
                         },
-                        "body": JSON.stringify({"ingr":[`2 slices ${nutrientbread}`,`1 slice ${nutrientprotein}`, `1 slice ${nutrientcheese}`, `1 ounce ${nutrientveggies}`]}),
+                        "body": JSON.stringify({"ingr":[`2 slices ${nutrientbread}`,`4 ounce ${nutrientprotein}`, `1 slice ${nutrientcheese}`, `1 ounce ${nutrientveggies}`]}),
                         "method": "POST",
                         "mode": "cors",
                 });
@@ -69,7 +69,8 @@ async function displayNutritionData() {
             // Populate the list with nutrition data
             for (const [key, value] of Object.entries(data.totalNutrients)) {
                 const listItem = document.createElement("li");
-                listItem.textContent = `${key}: ${value.quantity} ${value.unit}`;
+                const roundedQuantity = Math.round(value.quantity);
+                listItem.textContent = `${key}: ${roundedQuantity} ${value.unit}`;
                 nutritionList.appendChild(listItem);
             }
         } catch (error) {
@@ -84,5 +85,5 @@ nutritionapi()
 
 
 //Header dynamic
-const headerText = `Your ${bread} ${protein} sandwich`;
+const headerText = `Your ${bread} bread ${protein} sandwich`;
 document.getElementById('sandwich-header').textContent = headerText;
