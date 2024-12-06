@@ -29,12 +29,6 @@ p   {
     border-color: rgb(225, 185, 66);
 }
 
-li  {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
-    justify-content: center;
-}
-
 .btn {
     background-color: #007BFF; /* Bootstrap blue */
     color: white;
