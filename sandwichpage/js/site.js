@@ -1,7 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
-
+// index.js - Sandwich 101
+// Author: Group 14
+// Date: 12/09/24
 
 var urlParams = new URLSearchParams(window.location.search);
 
@@ -9,8 +8,6 @@ var urlParams = new URLSearchParams(window.location.search);
         var nutrientprotein = document.getElementById('protein').textContent = `Protein: ${urlParams.get('protein')}`;
         var nutrientcheese = document.getElementById('cheese').textContent = `Cheese: ${urlParams.get('cheese')}`;
         var nutrientveggies = document.getElementById('veggies').textContent = `Veggies: ${urlParams.get('veggies')}`;
-
-
 
 // Parse the query string from the URL
 const queryString = window.location.search;
