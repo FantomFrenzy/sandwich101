@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'palatino', Times, serif;
     background-color: rgb(247, 249, 176);
     padding: 40px;
     display: flex;
@@ -10,7 +10,7 @@ body {
   }
 
 h1  {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'palatino', Courier, monospace;
     color: rgb(145, 67, 8);
     padding: 20px;
     border: solid 4px;
