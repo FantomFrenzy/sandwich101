@@ -73,9 +73,19 @@
 						<p> </p>
 					</div>
 
+				<!-- Background overlay -->
+				<div id="popup-overlay" style="display: none;"></div>
+
 				<!-- Hidden Popup for validation -->
-				<div id="popup-check" style="display: none;">
+				<div id="popup-check" class="popup" style="display: none;">
 					<p>At least select a bread for your "sandwich," my guy. (TuT)</p>
+					<button onclick="closePopup()">OK</button>
+				</div>
+
+				<!-- Hidden Popup for Idiot Sandwich (only choosing bread) -->
+				<div id="popup-idiot-sandwich" class="popup" style="display: none;">
+					<p>How did you even find this?</p>
+					<img src="img/idiot-sandwich-poster.jpg" style="max-width: 500px; margin-bottom: 10px;">
 					<button onclick="closePopup()">OK</button>
 				</div>
 			</div>

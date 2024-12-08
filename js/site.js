@@ -14,7 +14,7 @@ const options = {
 // Function to populate each dropdown with options
 function populateDropdown(id, items) {
   const select = document.getElementById(id);
-  
+
   items.forEach(item => {
     const placeholder = document.createElement("option");
     placeholder.value = ""; // An empty value indicates no selection
@@ -36,13 +36,16 @@ Object.keys(options).forEach(key => populateDropdown(key, options[key]));
 
 // Show the pop-up when all fields are empty
 function showPopup(popupId) {
-  document.getElementById('popup-check').style.display = 'block';
+  document.getElementById(popupId).style.display = 'block';
+  document.getElementById('popup-overlay').style.display = 'block';
 }
 
 // Closes the pop-up
 // Function to close the popup
 function closePopup(popupId) {
   document.getElementById('popup-check').style.display = 'none';
+  document.getElementById('popup-idiot-sandwich').style.display = 'none';
+  document.getElementById('popup-overlay').style.display = 'none'; // Hide overlay
 }
 
 // Add event listener for the button
@@ -53,10 +56,17 @@ document.getElementById('submitButton').addEventListener('click', function () {
     const cheese = document.getElementById('cheese').value;
     const veggies = document.getElementById('veggies').value;
     
+    // If bread is selected, but other fields are empty, show the Idiot Sandwich popup
+    if (bread !== "" && (protein === "" && cheese === "" && veggies === "")) {
+    showPopup('popup-idiot-sandwich');
+    return; // Prevent redirect
+    }
+
     if (bread === "" && protein === "" && cheese === "" && veggies === "") {
       showPopup('popup-check'); // Show this popup if all are empty
       return;
     }
+
 
     // Construct a URL path based on the selected options
     const sandwichUrl = `sandwichpage/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
