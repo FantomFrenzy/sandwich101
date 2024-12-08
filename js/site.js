@@ -45,6 +45,7 @@ function showPopup(popupId) {
 function closePopup(popupId) {
   document.getElementById('popup-check').style.display = 'none';
   document.getElementById('popup-idiot-sandwich').style.display = 'none';
+  document.getElementById('popup-plscomplete').style.display = 'none';
   document.getElementById('popup-overlay').style.display = 'none'; // Hide overlay
 }
 
@@ -61,6 +62,11 @@ document.getElementById('submitButton').addEventListener('click', function () {
     showPopup('popup-idiot-sandwich');
     return; // Prevent redirect
     }
+
+    if (bread !== "" && (protein === "" || cheese === "" || veggies === "")) {
+      showPopup('popup-plscomplete');
+      return; // Prevent redirect
+      }
 
     if (bread === "" && protein === "" && cheese === "" && veggies === "") {
       showPopup('popup-check'); // Show this popup if all are empty
