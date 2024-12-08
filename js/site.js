@@ -15,6 +15,14 @@ const options = {
 function populateDropdown(id, items) {
   const select = document.getElementById(id);
   items.forEach(item => {
+    const placeholder = document.createElement("option");
+    placeholder.value = ""; // An empty value indicates no selection
+    placeholder.textContent = "";
+    placeholder.disabled = true; // Makes it unselectable after choosing another option
+    placeholder.selected = true; // Sets it as the default selected option
+    select.appendChild(placeholder);
+
+    // Populate dropdown with actual options
     const option = document.createElement("option");
     option.value = item.toLowerCase().replace(" ", "_");
     option.textContent = item;
