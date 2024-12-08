@@ -14,6 +14,7 @@ const options = {
 // Function to populate each dropdown with options
 function populateDropdown(id, items) {
   const select = document.getElementById(id);
+  
   items.forEach(item => {
     const placeholder = document.createElement("option");
     placeholder.value = ""; // An empty value indicates no selection
@@ -52,18 +53,17 @@ document.getElementById('submitButton').addEventListener('click', function () {
     const cheese = document.getElementById('cheese').value;
     const veggies = document.getElementById('veggies').value;
     
+    if (bread === "" && protein === "" && cheese === "" && veggies === "") {
+      showPopup('popup-check'); // Show this popup if all are empty
+      return;
+    }
+
     // Construct a URL path based on the selected options
     const sandwichUrl = `sandwichpage/sandwich.html?bread=${bread}&protein=${protein}&cheese=${cheese}&veggies=${veggies}`;
     // Redirect to the URL
     console.log('Redirecting to:', sandwichUrl);
     window.location.href = sandwichUrl;
-    // Check if all option fields are empty
-    
-    if (!bread && !protein && !cheese && !veggies) {
-      showPopup('popup-check'); // Show this popup if all are empty
-      return;
-    }
-    
+    // Check if all option fields are empty  
 });
 
     const aboutUsButton = document.querySelector('.about-us-btn');
