@@ -75,11 +75,36 @@ async function displayNutritionData() {
             console.error("Error fetching nutrition data:", error);
         }
     }
+
+
+//protein image listen
+
+
+// Function to update the protein image
+function updateProteinImage(protein) {
+        const proteinImage = document.getElementById("protein-image");
+        protein = urlParams.get("protein")
+        if (protein === "egg") {
+            proteinImage.src = "img/eggSand.jpg";
+        } else if (protein === "ham") {
+            proteinImage.src = "img/ham.jpg";
+        } else if (protein === "roast_beef") {
+            proteinImage.src = "img/roastbeef.webp";
+        } else if (protein === "turkey") {
+            proteinImage.src = "img/turkey.jpg";
+        } else {
+            proteinImage.src = ""; // Clear image if no valid selection
+        }
     
+        proteinImage.alt = `${protein} image` || "No protein selected";
+    }
+
+updateProteinImage(nutrientprotein);
+
 // Call the display function when the page loads or on some event
 displayNutritionData();
 
-nutritionapi()
+nutritionapi();
 
 
 //Header dynamic

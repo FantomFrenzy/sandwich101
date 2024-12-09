@@ -7,6 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    height: auto; 
   }
 
 h1  {
@@ -49,3 +50,25 @@ p   {
     margin: 20px 0;
 }
 
+.nutorg {
+    display: flex;
+    align-items: right; /* Optional: aligns items vertically in the container */
+    border: solid 3px;
+    background-color: white;
+    padding: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#protein-image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    border: solid 2px #ccc;
+    border-radius: 8px;
+    height: 500px;
+    width: 500px;
+}
